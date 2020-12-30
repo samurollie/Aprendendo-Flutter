@@ -10,6 +10,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   // Configuração da homePage em si
   int count = 0; // Contador
+  bool isDarkTheme = false;
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +23,17 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: Center(
+        child: Switch(
+          value: isDarkTheme,
+          onChanged: (value) {
+            setState(() {
+              isDarkTheme = value;
+            });
+          },
+        ),
+      ),
+
+      /* body: Center(
         // Body tem tudo que estará no "corpo da página"
         // Centraliza o que estiver dentro dele
         child: GestureDetector(
@@ -39,8 +51,9 @@ class _HomePageState extends State<HomePage> {
               count++; // Aumenta o contador
             });
           },
-        ),
-      ),
+        ), 
+      ),*/
+
       floatingActionButton: FloatingActionButton(
         // FloatingAction Button implementa um botão flutuante (tipo o de postar status no whatsapp)
         child:

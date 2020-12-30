@@ -14,6 +14,8 @@ class AppWidget extends StatelessWidget {
       ),
       home: HomePage(),
       // Home é o atributo do material app que diz que trata como vai ser a página em si do App. Estou passando como valor HomePage() (veja abaixo)
+      debugShowCheckedModeBanner: false,
+      //Esconde a barrinha vermelha com "DEBUG"
     );
   }
 }

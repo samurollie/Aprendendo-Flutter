@@ -28,6 +28,13 @@ Os widgets no Flutter respeitam um sistema de hierarquia, onde um widget pode fi
 
 Com isso, um widget que for filho (dentro de outro widget) irá herdar por padrão as propriedades do seu pai a não ser que seja configurado o contrário. Por exemplo, se um widget tiver um texto azul, os seus filhos também terão um texto azul até que se diga o contrário.
 
+
+## Single Render X Multi Render
+
+Muitas vezes ao programar no Flutter, coisas "estranhas" podem acontecer. De repente, um objeto pode ficar num tamanho diferente do que era necessário e etc. Neste caso, entra aí o conceito de Single Render e Multi Render.
+
+Por exemplo, Se você criar um container preto de tamanho X e dentro dele tiver um child um outro container verde de tamanho Y (com Y < X). Ao rodar no aplicativo, o que você verá será apenas um container verde com tamanho X! Isso acontece por que os containers são redenrizados juntos, com o mesmo single render e é da natureza do container ocupar o tamanho do pai. Para evitar isso, podemos usar Widgets que tiverem um render próprio, como o Center. Desta forma, os dois containers serão tratados de forma diferente e o container preto terá o tamanho X e o container verde, o tamanho Y.
+
 ## Widgets Úteis
 
 ### Container
