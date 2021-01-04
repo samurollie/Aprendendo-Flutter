@@ -22,18 +22,49 @@ class _HomePageState extends State<HomePage> {
         title: Center(
           child: Text('Bem Vindo!'),
         ),
+        actions: [
+          CustomSwitch(),
+          Icon(Icons.search),
+        ],
       ),
-      body: Center(
-        child: Switch(
-          // Switch é um widget que adicionar uma alavanca, requer dois valores: Value e OnChanged. Nesse caso, está sendo usado para se referir se o app deve ficar no modo escuro ou não.
-          value: AppControler.instance
-              .isDarkTheme, // On changed é o booleano que indica o valor inicial, neste caso eu estou passando o que está na classe AppControler
-          onChanged: (value) {
-            //On changed indica o que deve acontecer quando o valor mudar.
-            AppControler.instance.changeTheme(); // Neste caso, vai mudar o tema.
-          },
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Contador: $count',
+              style: TextStyle(fontSize: 25),
+            ),
+            CustomSwitch(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  width: 64,
+                  height: 64,
+                  color: Colors.red,
+                ),
+                Container(
+                  width: 64,
+                  height: 64,
+                  color: Colors.green,
+                ),
+                Container(
+                  width: 64,
+                  height: 64,
+                  color: Colors.blue,
+                ),
+              ],
+            )
+          ],
         ),
       ),
+
+      /* Center(
+        child: CustomSwitch(),
+      ) */
 
       /* body: Center(
         // Body tem tudo que estará no "corpo da página"
@@ -68,6 +99,21 @@ class _HomePageState extends State<HomePage> {
           });
         },
       ),
+    );
+  }
+}
+
+class CustomSwitch extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Switch(
+      // Switch é um widget que adiciona uma alavanca, requer dois valores: Value e OnChanged. Nesse caso, está sendo usado para se referir se o app deve ficar no modo escuro ou não.
+      value: AppControler.instance.isDarkTheme,
+      // On changed é o booleano que indica o valor inicial, neste caso eu estou passando o que está na classe AppControler
+      onChanged: (value) {
+        //On changed indica o que deve acontecer quando o valor mudar.
+        AppControler.instance.changeTheme(); // Neste caso, vai mudar o tema.
+      },
     );
   }
 }
