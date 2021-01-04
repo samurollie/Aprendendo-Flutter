@@ -30,8 +30,9 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: ListView(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          scrollDirection: Axis.vertical,
           children: [
             Text(
               'Contador: $count',
@@ -57,7 +58,82 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.blue,
                 ),
               ],
-            )
+            ),
+            Container(
+              width: 64,
+              height: 64,
+              color: Colors.yellow,
+            ),
+            Container(
+              width: 64,
+              height: 64,
+              color: Colors.yellow,
+            ),
+            Container(
+              width: 64,
+              height: 64,
+              color: Colors.yellow,
+            ),
+            Container(
+              width: 64,
+              height: 64,
+              color: Colors.yellow,
+            ),
+            Container(
+              width: 64,
+              height: 64,
+              color: Colors.yellow,
+            ),
+            Container(
+              width: 64,
+              height: 64,
+              color: Colors.yellow,
+            ),
+            Container(
+              width: 64,
+              height: 64,
+              color: Colors.yellow,
+            ),
+            Container(
+              width: 64,
+              height: 64,
+              color: Colors.yellow,
+            ),
+            Container(
+              width: 64,
+              height: 64,
+              color: Colors.yellow,
+            ),
+            Container(
+              width: 64,
+              height: 64,
+              color: Colors.yellow,
+            ),
+            Container(
+              width: 64,
+              height: 64,
+              color: Colors.yellow,
+            ),
+            Container(
+              width: 64,
+              height: 64,
+              color: Colors.yellow,
+            ),
+            Container(
+              width: 64,
+              height: 64,
+              color: Colors.yellow,
+            ),
+            Container(
+              width: 64,
+              height: 64,
+              color: Colors.yellow,
+            ),
+            Container(
+              width: 64,
+              height: 64,
+              color: Colors.yellow,
+            ),
           ],
         ),
       ),
