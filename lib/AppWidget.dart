@@ -2,6 +2,7 @@ import 'package:aprendendo_flutter/AppController.dart';
 import 'package:flutter/material.dart';
 
 import 'homePage.dart';
+import 'login_page.dart';
 
 class AppWidget extends StatelessWidget {
   @override
@@ -21,7 +22,7 @@ class AppWidget extends StatelessWidget {
                 : Brightness.light,
             // brightness é o campo que diz se o app vai estar no modo escuro ou claro. O que estamos fazendo aq é: Se o valor da minha instancia de isDarkTheme for verdadeiro, modo escuro. Caso contrário, modo claro.
           ),
-          home: HomePage(),
+          home: LoginPage(),
           // Home é o atributo do material app que diz que trata como vai ser a página em si do App. Estou passando como valor HomePage() (veja abaixo)
           debugShowCheckedModeBanner: false,
           //Esconde a barrinha vermelha com "DEBUG"

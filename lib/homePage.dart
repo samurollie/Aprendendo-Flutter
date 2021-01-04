@@ -30,9 +30,8 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        child: ListView(
-          // mainAxisAlignment: MainAxisAlignment.center,
-          scrollDirection: Axis.vertical,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               'Contador: $count',
@@ -58,82 +57,7 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.blue,
                 ),
               ],
-            ),
-            Container(
-              width: 64,
-              height: 64,
-              color: Colors.yellow,
-            ),
-            Container(
-              width: 64,
-              height: 64,
-              color: Colors.yellow,
-            ),
-            Container(
-              width: 64,
-              height: 64,
-              color: Colors.yellow,
-            ),
-            Container(
-              width: 64,
-              height: 64,
-              color: Colors.yellow,
-            ),
-            Container(
-              width: 64,
-              height: 64,
-              color: Colors.yellow,
-            ),
-            Container(
-              width: 64,
-              height: 64,
-              color: Colors.yellow,
-            ),
-            Container(
-              width: 64,
-              height: 64,
-              color: Colors.yellow,
-            ),
-            Container(
-              width: 64,
-              height: 64,
-              color: Colors.yellow,
-            ),
-            Container(
-              width: 64,
-              height: 64,
-              color: Colors.yellow,
-            ),
-            Container(
-              width: 64,
-              height: 64,
-              color: Colors.yellow,
-            ),
-            Container(
-              width: 64,
-              height: 64,
-              color: Colors.yellow,
-            ),
-            Container(
-              width: 64,
-              height: 64,
-              color: Colors.yellow,
-            ),
-            Container(
-              width: 64,
-              height: 64,
-              color: Colors.yellow,
-            ),
-            Container(
-              width: 64,
-              height: 64,
-              color: Colors.yellow,
-            ),
-            Container(
-              width: 64,
-              height: 64,
-              color: Colors.yellow,
-            ),
+            )
           ],
         ),
       ),
