@@ -40,3 +40,9 @@ Por exemplo, Se você criar um container preto de tamanho X e dentro dele tiver 
 ### Container
 
 Container são widgets genéricos. Tentam por padrão seguir o alinhamento, tamanho e etc do widget filho. Se não tiver nenhum filho, ou essas propriedades estiverem faltando, o container irá ser redenrizado no widget pai com o menor tamanho possível.
+
+### Row
+### ListView
+### Column
+### Stack
+### Scaffold

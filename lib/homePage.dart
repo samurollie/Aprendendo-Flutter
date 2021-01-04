@@ -27,6 +27,36 @@ class _HomePageState extends State<HomePage> {
           Icon(Icons.search),
         ],
       ),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            UserAccountsDrawerHeader(
+              currentAccountPicture: ClipRRect(
+                borderRadius: BorderRadius.circular(40),
+                child: Image.network(
+                  'https://avatars2.githubusercontent.com/u/53665491?s=460&u=5db3bedb8d53b15d5557ad16ee1c766165f4334d&v=4',
+                ),
+              ),
+              accountName: Text('Samuel'),
+              accountEmail: Text('samuelbarbosa2001@gmail.com'),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Início'),
+              subtitle: Text('Tela inicial'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Tela de Login'),
+              subtitle: Text('Sair'),
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed('/');
+              },
+            )
+          ],
+        ),
+      ),
       body: Container(
         width: double.infinity,
         height: double.infinity,

@@ -1,4 +1,3 @@
-import 'package:aprendendo_flutter/homePage.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -11,12 +10,12 @@ class _LoginPageState extends State<LoginPage> {
   String _password = '';
 
   Widget MyBody() {
-    return SingleChildScrollView(
+    return Center(
       child: SizedBox(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.width,
         child: Padding(
-          padding: const EdgeInsets.all(26.0),
+          padding: const EdgeInsets.all(10.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -27,40 +26,57 @@ class _LoginPageState extends State<LoginPage> {
                   'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png',
                 ),
               ),
-              TextField(
-                keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(
-                  labelText: 'Email',
-                  border: OutlineInputBorder(),
+              Card(
+                child: Column(
+                  children: [
+                    TextField(
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        labelText: 'Email',
+                        border: OutlineInputBorder(),
+                      ),
+                      onChanged: (text) {
+                        _email = text;
+                      },
+                    ),
+                    Container(height: 10),
+                    TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        labelText: 'Password',
+                        border: OutlineInputBorder(),
+                      ),
+                      onChanged: (text) {
+                        _password = text;
+                      },
+                    ),
+                    Container(height: 15),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: RaisedButton(
+                        color: Colors.black,
+                        textColor: Colors.white,
+                        onPressed: () {
+                          if (_email == 'samuelbarbosa2001@gmail.com' &&
+                              _password == '123') {
+                            print('SENHA CORRETA');
+                            Navigator.of(context).pushReplacementNamed('/home');
+                          } else {
+                            print('SENHA ERRADA');
+                          }
+                        },
+                        child: Container(
+                          width: double.infinity,
+                          child: Text(
+                            'Entrar',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                onChanged: (text) {
-                  _email = text;
-                },
               ),
-              Container(height: 10),
-              TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  labelText: 'Password',
-                  border: OutlineInputBorder(),
-                ),
-                onChanged: (text) {
-                  _password = text;
-                },
-              ),
-              Container(height: 15),
-              RaisedButton(
-                onPressed: () {
-                  if (_email == 'samuelbarbosa2001@gmail.com' &&
-                      _password == '123') {
-                    print('SENHA CORRETA');
-                    Navigator.of(context).pushReplacementNamed('/home');
-                  } else {
-                    print('SENHA ERRADA');
-                  }
-                },
-                child: Text('Entrar'),
-              )
             ],
           ),
         ),
