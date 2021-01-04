@@ -16,11 +16,11 @@ Ao criar uma página podemos utilizar Stateful Widgets (Widgets com Estado) e St
 
 ### Stateless Wigdet
 
-Stateless widgets são uma forma mais simples de widget, são utilizadas para coisas estáticas, que não irão ser atualizadas em uma página, como por exemplo o título.
+Stateless widgets são uma forma mais simples de widget, são utilizadas para coisas estáticas, que não irão ser atualizadas em uma página, como por exemplo o título. Isso ocorre por que um Stateless Widget não possui a capacidade de salvar o seu atual estado. Logo, se sairmos do aplicativo todo seu estado será perdido
 
 ### Statefull Widget
 
-Statefull Widgets são utilizados para coisas em uma página que serão atualizadas, como por exemplo um texto que mostre qual a sua distancia ate um certo ponto.
+Statefull Widgets são utilizados para coisas em uma página que serão atualizadas, como por exemplo um texto que mostre qual a sua distancia ate um certo ponto. Isso ocorre pois o Statefull Widget pode salvar o seu estado, e mesmo atualizando a tela ele pode continua como se nada tivesse acontecido.
 
 ## Funcionamento dos widgets
 

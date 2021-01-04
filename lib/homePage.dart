@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'AppController.dart';
+
 class HomePage extends StatefulWidget {
   // StateFul Widget
   @override
@@ -10,7 +12,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   // Configuração da homePage em si
   int count = 0; // Contador
-  bool isDarkTheme = false;
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +25,12 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: Switch(
-          value: isDarkTheme,
+          // Switch é um widget que adicionar uma alavanca, requer dois valores: Value e OnChanged. Nesse caso, está sendo usado para se referir se o app deve ficar no modo escuro ou não.
+          value: AppControler.instance
+              .isDarkTheme, // On changed é o booleano que indica o valor inicial, neste caso eu estou passando o que está na classe AppControler
           onChanged: (value) {
-            setState(() {
-              isDarkTheme = value;
-            });
+            //On changed indica o que deve acontecer quando o valor mudar.
+            AppControler.instance.changeTheme(); // Neste caso, vai mudar o tema.
           },
         ),
       ),
