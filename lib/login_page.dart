@@ -49,9 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                     if (_email == 'samuelbarbosa2001@gmail.com' &&
                         _password == '123') {
                       print('SENHA CORRETA');
-                      Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
+                      Navigator.of(context).pushReplacementNamed('/home');
                     } else {
                       print('SENHA ERRADA');
                     }
